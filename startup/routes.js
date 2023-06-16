@@ -1,4 +1,5 @@
 const home = require('../routes/home');
+const accounts = require('../routes/accounts')
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
@@ -16,6 +17,10 @@ module.exports = (app, express) => {
     app.use(express.urlencoded({extended:false}));
     app.set('view engine', 'ejs');
 
+    // setting static files
+    app.use(express.static('public'))
+
     // routes
     app.use('/', home);
+    app.use('/accounts', accounts);
 }
