@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
 
-    res.status(200).render('home')
+    res.status(200).render('login')
 })
 
 module.exports = router
