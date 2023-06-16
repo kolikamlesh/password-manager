@@ -20,9 +20,13 @@
   },
   "homepage": "https://github.com/kolikamlesh/password-manager#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.1.4",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7"
   }
 }

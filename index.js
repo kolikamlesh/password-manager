@@ -3,7 +3,7 @@ const log = console.log
 const app = express();
 
 require('dotenv').config()
-require('./startup/connection')
+require('./startup/routes')(app, express);
 
 app.listen(process.env.port, (err) => {
 
