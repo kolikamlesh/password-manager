@@ -1,19 +1,11 @@
 const express = require('express');
-const log = console.log
 const app = express();
 
-require('dotenv').config()
+require('dotenv').config();
+
 require('./startup/routes')(app, express);
 
-app.listen(process.env.port, (err) => {
+app.listen(process.env.port, ()=> {
+    console.log('Listening on PORT: 8080');
+});
 
-    if(err){
-        log(`anable to listen on port ${process.env.port}`)
-        log('due to error : ' + err)
-    }
-
-    else{
-
-        log(`listening on port ${process.env.port}`)
-    }
-})
